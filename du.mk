@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,17 +19,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DU stuff
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_BRAND := Xiaomi
+PRODUCT_NAME := du_lavender
 PRODUCT_DEVICE := lavender
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_lavender
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -39,3 +39,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="lavender-user 9 PKQ1.180904.001 V10.3.6.0.PFGMIXM release-keys"
 
 BUILD_FINGERPRINT := xiaomi/lavender/lavender:9/PKQ1.180904.001/V10.3.6.0.PFGMIXM:user/release-keys
+
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
