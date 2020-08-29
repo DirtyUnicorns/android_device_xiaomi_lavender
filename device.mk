@@ -40,6 +40,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
+# Dalvik
+$(call inherit-product, vendor/extras/configs/phone-xhdpi-4096-dalvik-heap.mk)
+
 # FM
 BOARD_HAVE_QCOM_FM := true
 
