@@ -38,6 +38,6 @@ TARGET_VENDOR_PRODUCT_NAME := lavender
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V11.0.1.0.QFGMIXM release-keys"
 
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.201005.004/6782484:user/release-keys"
 
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
